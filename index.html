@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Pacientes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Pacientes</h1>
+        <form id="patientForm">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" required>
+
+            <label for="birthDate">Data de Nascimento:</label>
+            <input type="date" id="birthDate" required>
+
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" required>
+
+            <label for="sex">Sexo:</label>
+            <select id="sex" required>
+                <option value="">Selecione</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+                <option value="Outro">Outro</option>
+            </select>
+
+            <label for="address">Endereço:</label>
+            <input type="text" id="address">
+
+            <label for="status">Status:</label>
+            <select id="status" required>
+                <option value="Ativo">Ativo</option>
+                <option value="Inativo">Inativo</option>
+            </select>
+
+            <button type="submit">Salvar</button>
+        </form>
+
+        <h2>Lista de Pacientes</h2>
+        <input type="text" id="filterName" placeholder="Filtrar por nome">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Data de Nascimento</th>
+                    <th>CPF</th>
+                    <th>Sexo</th>
+                    <th>Endereço</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="patientList"></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
